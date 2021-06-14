@@ -8,6 +8,7 @@ header {
 	text-align:  center;
 	font-family:  Helvetica;
 	font-size:  80px;
+	color:  #F4F6F7;
 }
 
 .container {
@@ -16,4 +17,11 @@ header {
 	height: 40%;
 	background-color: red;
 	margin: 20px;
+}
+
+.movie {
+	text-align:  center;
+	color:  white;
+	font-family: Arial;
+	font-size: 24px;
 }
