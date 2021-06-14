@@ -1,0 +1,19 @@
+body {
+	background-color: #99A3A4;
+	height: 100%:
+	width: 100%;
+}
+
+header {
+	text-align:  center;
+	font-family:  Helvetica;
+	font-size:  80px;
+}
+
+container {
+	float: right;
+	width: 30%;
+	height: 40%;
+	background-color: red;
+	margin: 20px;
+}
