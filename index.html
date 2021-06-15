@@ -2,12 +2,47 @@
 <html lang="en">
 <head>
 	<link href="style.css" rel="stylesheet">
+
 	<title> My site!</title>
 </head>
 <body>
-	<header>PICK A MOVIE!</header>
-	<div class="container"></div>
-	<div class="container"></div>
-	<div class="container"></div>	
-</body>
+	<header>HOVER TO PICK A MOVIE!</header>
+	<div id='space' style="height:20%"> </div>
+	<div class="container" id="container1"><div class="movie original" id="movie1">The Haunting in Connecticut.</div></div>
+	<div class="container" id="container2"> <div class="movie original" id="movie2">Hatchet </div></div>
+	<div class="container" id="container3"> <div class="movie original" id="movie3">Banshee Chapter </div></div>	
+
+	<div class="secret"> <div class="text">Monsters Inc.</div></div>
+
+	<script>
+
+		one = document.getElementById('container1')
+		one.addEventListener('mouseover', function () { 
+			document.getElementById('container1').classList.add('dynamic')
+			document.getElementById('movie1').classList.remove('original');
+			})
+		one.addEventListener('mouseleave',function (){
+			document.getElementById('container1').classList.remove('dynamic');
+			document.getElementById('movie1').classList.add('original'); })
+			
+			two = document.getElementById('container2')
+		two.addEventListener('mouseover', function () { 
+			document.getElementById('container2').classList.add('dynamic')
+			document.getElementById('movie2').classList.remove('original');
+			})
+		two.addEventListener('mouseleave',function (){
+			document.getElementById('container2').classList.remove('dynamic');
+			document.getElementById('movie2').classList.add('original');})
+		
+			three = document.getElementById('container3')
+		three.addEventListener('mouseover', function () { 
+			document.getElementById('container3').classList.add('dynamic')
+			document.getElementById('movie3').classList.remove('original');
+			})
+		three.addEventListener('mouseleave',function (){
+			document.getElementById('container3').classList.remove('dynamic');
+			document.getElementById('movie3').classList.add('original');})
+
+	</script>
+	</body>
 </html>
