@@ -11,12 +11,16 @@ header {
 	color:  #F4F6F7;
 }
 
+select {
+	text-align: center;
+	margin-top: 1%;
+}
 .button {
 	display: flex;
 	justify-content: center;
 }
 button {
-	margin: 100px;
+	margin: auto auto;
 	height: 50px;
 	width: 300px;
 	background-color:aquamarine;
@@ -34,8 +38,9 @@ button {
 }
 
 .container {
-	width: 20%;
-	height: 300px;
+	width:20%;
+	padding:10px;
+	height: 200px;
 	background-color: red;
 	margin: 50px;
 	border-color: #6E2C00;
@@ -45,7 +50,7 @@ button {
 	overflow-wrap: break-word;
 	text-align: center;
 	color: black;
-	font-size: 25.5vw;
+	font-size: 34px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
