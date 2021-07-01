@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link href="style.css" rel="stylesheet">
+	<script  src="javascript2.js"></script>
+    <script  src="javascript.js"></script>
+
+	<title> Update Movies</title>
+    <script>  
+        function execute() {
+
+            var value = document.getElementById("select").value
+            if (value == "Drama"){ movielist = Drama}
+            if (value == "Horror"){ movielist = Horror}
+            if (value == "Comedy"){ movielist = Comedy}
+            document.getElementById("select").classList.add("invisible")
+            document.getElementById("span").classList.add("invisible")
+            
+            for (var i in movielist) {
+            var newmovie = document.createElement('div');
+            newmovie.id = movielist[i]; newmovie.className = "container original";
+            newmovie.innerHTML = movielist[i];
+            document.querySelector('.bulk').appendChild(newmovie);
+            }
+            
+            document.querySelectorAll('.original').forEach(item => {
+                item.addEventListener('click', event => {
+                    item.classList.add('dynamic')
+                    item.classList.remove('original')
+                    document.querySelectorAll('.original').forEach(item => {
+                        item.classList.remove('original')
+                        item.classList.add('invisible')})
+                    })
+                })
+    }</script>
+</head>
+<body>
+    <Header style="font-family: Georgia;"> do NOT.... put in garbage movies... or else
+     <a href="index.html" style="margin-left:-10%;">Back to Selecting</a>
+     <hr>
+    </Header>
+    <div id = "addarea" style="border: 1px solid #000 !important;">
+    <div style="margin-top:-50px;"><h1 style="color:black; font-size: 100px;"> Adding a new movie: </h1></div>
+ <div id="addDiv" style="line-height:1;">
+    
+    
+
+
+    <form id="addForm"><div>  <label> 1. Choose a genre to add:</label> <select id= "genreForm" style="size:2"> 
+        <option></option>  
+        <option value="Horror"> Horror </option>
+        <option value="Comedy"> Comedy </option>
+        <option value="Drama"> Drama </option>
+        <option value="Thriller"> Thriller </option> </select> </div>
+
+        <br>
+
+    <div><label>2. Type in the movie name:</label> <input type="text" id= "movieForm" placeholder="Found Footage movie #500"></div>
+    <br>
+    <div><button type="button" id="addSubmit"> Submit </button>
+    <div id="addresult"></form></div></div>
+    
+
+
+
+
+</div><br></div>
+<br><br>
+<br><br>
+<div id= "removearea" style= "border: 1px solid #000 !important">
+    <div style="margin-top:-50px;"><h1 style="color:black; font-size: 100px;"> Removing a movie: </h1></div>
+    <div> <form id="removeForm" class="form">  
+        <label>2. Type in the movie name:</label> <input list="allmovies" placeholder='peepee'>
+        <datalist id ="allmovies"></datalist>
+        <button type="button" id="removeSubmit">Submit</form>
+    </div><br><br></div>
+    
+        
+</body>

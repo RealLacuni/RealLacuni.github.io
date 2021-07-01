@@ -3,6 +3,20 @@ body,html {
 	height: 100%;
 	width: 100%;
 }
+label {
+	padding: 10px;
+	font-size: 30px;
+}
+
+a {
+	position:absolute;
+	float:right;
+	padding: 20px;
+	padding-left:300px;
+	font-size: 30px;
+	color:darkslateblue;
+}
+
 
 header {
 	text-align: center;
@@ -19,7 +33,7 @@ select {
 	display: flex;
 	justify-content: center;
 }
-button {
+.buttonClass {
 	margin: auto auto;
 	height: 50px;
 	width: 300px;
