@@ -5,7 +5,10 @@
     var Comedy = shuffle(["Just Friends", "Jawbreaker", "The Truman Show", "Being John Malkovich", "The House"])
     var Drama = shuffle(["Gladiator", "Project Almanac", "The Father","True Romance", "Pokemon: The Movie 2000", "There Will be Blood", "Gangs of New York"])
     var Thriller = shuffle([])
-    listOfGenres = {"Horror": Horror, "Comedy": Comedy, "Drama":Drama, "Thriller":Thriller} 
+    var LaurenSpecial = shuffle(['Titanic', 'Men in Black', 'Accepted', 'Django', 'Truman Show', 'Yes man', 'Drag me to hell', 'Repo Men', 'Forgetting Sarah Marshall',
+                                 'Get him to the  greek'])
+         
+    listOfGenres = {"Horror": Horror, "Comedy": Comedy, "Drama":Drama, "Thriller":Thriller, "LaurenSpecial": LaurenSpecial} 
 
  
      
@@ -16,6 +19,7 @@
             if (value == "Horror"){ movielist = Horror}
             if (value == "Comedy"){ movielist = Comedy}
             if (value == "Thriller"){ movielist = Thriller}
+             if (value == "LaurenSpecial"){movielist = LaurenSpecial}
             document.getElementById("select").classList.add("invisible")
             document.getElementById("span").classList.add("invisible")
             
